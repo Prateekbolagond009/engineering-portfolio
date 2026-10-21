@@ -1,0 +1,1 @@
+Add your actual project evidence here: FIFO/UART waveforms, Vivado reports, OTA/BGR plots, embedded dashboard screenshots, and optional resume PDF. Do not replace placeholders with unmeasured claims.

@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1120">
   <meta name="description" content="Engineering portfolio covering RTL design, embedded systems, and analog IC design.">
-  <title>Engineering Portfolio | Nithin Gowda S</title>
+  <title>Engineering Portfolio | Prateek Bolagond</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .resume-dropdown { position: relative; display: inline-block; }
+    .resume-toggle { cursor: pointer; font: inherit; }
+    .resume-menu { position: absolute; top: calc(100% + 10px); left: 0; min-width: 215px; padding: 8px; background: #111d31; border: 1px solid #33445e; border-radius: 12px; z-index: 1000; box-shadow: 0 12px 32px rgba(0,0,0,.3); }
+    .resume-menu[hidden] { display: none !important; }
+    .resume-menu a { display: block; padding: 12px 14px; color: #f3f7ff; text-decoration: none; border-radius: 8px; white-space: nowrap; }
+    .resume-menu a:hover, .resume-menu a:focus-visible { background: #20324a; color: #4de0d2; outline: none; }
+  </style>
 </head>
 <body>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
@@ -26,9 +35,19 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="status-dot"></span> ECE · UVCE Bengaluru · 2023–2027</div>
         <h1>Building where<br> <span class="gradient-text">hardware meets code.</span></h1>
-        <p class="hero-lede">I'm <strong>Nithin Gowda S</strong>, an Electronics and Communication Engineering student exploring RTL design, embedded firmware, and analog circuits.</p>
+        <p class="hero-lede">I'm <strong>Prateek Bolagond</strong>, an Electronics and Communication Engineering student exploring RTL design, embedded firmware, and analog circuits.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore projects <span>↓</span></a>
+          <div class="resume-dropdown">
+            <button class="button button-primary resume-toggle" id="resume-toggle" type="button" aria-expanded="false" aria-controls="resume-menu">
+              Resume <span aria-hidden="true">⌄</span>
+            </button>
+            <div class="resume-menu" id="resume-menu" hidden>
+              <a href="./embeded%20system%20resume.pdf" target="_blank" rel="noopener">Embedded Systems</a>
+              <a href="./analog%20resume.pdf" target="_blank" rel="noopener">Analog Design</a>
+              <a href="./digital%20resume.pdf" target="_blank" rel="noopener">Digital Design</a>
+            </div>
+          </div>
+          <a class="button button-secondary" href="#projects">Explore projects <span>↓</span></a>
           <a class="button button-secondary" href="#contact">Get in touch <span>↗</span></a>
         </div>
         <div class="hero-meta"><span><i class="meta-line"></i> Digital design / RTL</span><span><i class="meta-line"></i> Embedded systems</span><span><i class="meta-line"></i> Analog IC design</span></div>
@@ -150,6 +169,32 @@
   </main>
 
   <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">N<span>.</span></span><span class="brand-text">ENGINEERING<br><small>PORTFOLIO</small></span></a><p>Designed to document the process, not just the outcome.</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+  <script>
+    (() => {
+      const toggle = document.getElementById('resume-toggle');
+      const menu = document.getElementById('resume-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.hidden;
+        menu.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.resume-dropdown')) {
+          menu.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          menu.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

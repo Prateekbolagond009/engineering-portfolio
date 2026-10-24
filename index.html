@@ -78,33 +78,198 @@
       <p class="fine-print">Skills are grouped from the supplied resumes. Keep only tools and concepts you can comfortably discuss in an interview.</p>
     </section>
 
-      <div class="project-grid">
-        <article class="project-card" data-category="rtl">
-          <div class="project-visual visual-rtl"><div class="visual-label">01 / DIGITAL DESIGN</div><svg viewBox="0 0 320 150" aria-hidden="true"><g fill="none" stroke="#5be4d5" stroke-width="1.5"><path d="M10 28 H64 V48 H92"/><path d="M10 65 H40 V85 H92"/><path d="M228 35 H265 V55 H310"/><path d="M228 88 H270 V112 H310"/><path d="M160 8 V32 M160 118 V144"/></g><rect x="92" y="32" width="136" height="86" rx="9" fill="#12263a" stroke="#5be4d5"/><text x="160" y="66" text-anchor="middle" fill="#eefcff" font-size="14" font-family="DM Mono">ASYNC FIFO</text><text x="160" y="86" text-anchor="middle" fill="#8da9bc" font-size="9" font-family="DM Mono">WRITE CLK ↔ READ CLK</text><g fill="#5be4d5"><circle cx="64" cy="28" r="3"/><circle cx="40" cy="65" r="3"/><circle cx="265" cy="35" r="3"/><circle cx="270" cy="88" r="3"/></g></svg></div>
-          <div class="project-body"><div class="project-meta"><span>VERILOG RTL</span><span>2026</span></div><h3>Asynchronous FIFO Design</h3><p>Designed a FIFO for independent read and write clock domains, using binary-to-Gray pointer conversion, two-flip-flop synchronizers, and full/empty flag logic as described in the RTL resume.</p><div class="project-tags"><span>CDC</span><span>Gray code</span><span>Testbench</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: architecture diagram and pointer synchronization waveform.</li><li>Evidence to add: full/empty test cases and testbench pass/fail output.</li><li>Evidence to add: synthesis utilization, if generated.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — add verified simulation evidence.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
-        <article class="project-card" data-category="rtl">
-          <div class="project-visual visual-uart"><div class="visual-label">02 / SERIAL COMMUNICATION</div><svg viewBox="0 0 320 150" aria-hidden="true"><g stroke="#9d91ff" stroke-width="1.5" fill="none"><path d="M10 92 H28 V45 H55 V92 H82 V45 H109 V92 H136 V45 H163 V92 H190 V45 H217 V92 H244 V45 H271 V92 H310"/><path d="M10 118 H310" stroke-dasharray="3 5" opacity=".4"/></g><g fill="#c7c1ff" font-size="9" font-family="DM Mono"><text x="14" y="35">START</text><text x="65" y="35">DATA</text><text x="230" y="35">STOP</text><text x="10" y="137">TX / RX SERIAL FRAME</text></g></svg></div>
-          <div class="project-body"><div class="project-meta"><span>VERILOG HDL</span><span>2026</span></div><h3>UART Protocol Design</h3><p>Developed a modular UART design with a configurable baud-rate generator and separate transmitter and receiver modules, with FSM-based transmission and reception described in the RTL resume.</p><div class="project-tags"><span>UART TX/RX</span><span>Baud generator</span><span>FSM</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: TX and RX waveforms for a known data byte.</li><li>Evidence to add: transmitted-versus-received data check.</li><li>Evidence to add: supported baud rate and frame configuration.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — add verified simulation evidence.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
-        <article class="project-card" data-category="embedded">
-          <div class="project-visual visual-embedded"><div class="visual-label">03 / CONDITION MONITORING</div><svg viewBox="0 0 320 150" aria-hidden="true"><rect x="20" y="22" width="280" height="108" rx="8" fill="#12283a" stroke="#437e9a"/><path d="M38 83 L58 83 L68 58 L80 104 L93 73 L105 83 L128 83 L143 45 L157 111 L171 83 L193 83 L207 64 L219 92 L232 83 L282 83" stroke="#62c9f5" stroke-width="2" fill="none"/><g fill="#86b8d0" font-size="9" font-family="DM Mono"><text x="34" y="40">MOTOR HEALTH SIGNAL</text><text x="34" y="118">CURRENT · VIBRATION · TEMP</text></g></svg></div>
-          <div class="project-body"><div class="project-meta"><span>EMBEDDED SYSTEMS</span><span>2026 · CO-DEVELOPED</span></div><h3>Predictive Maintenance System</h3><p>Resume-described project using STM32F446RE and Embedded C for motor monitoring, current sensing, multiple sensor streams, and a Python bridge with a local Wi-Fi dashboard.</p><div class="project-tags"><span>STM32F446RE</span><span>Embedded C</span><span>Python</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: sensor data and dashboard screenshots.</li><li>Evidence to add: measured RMS current against a reference, if available.</li><li>Evidence to add: fault-detection evaluation and test conditions, if measured.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — add real measurements; do not infer accuracy.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
-        <article class="project-card" data-category="embedded">
-          <div class="project-visual visual-camera"><div class="visual-label">04 / EDGE ML</div><div class="camera-frame"><div class="camera-lens"></div><div class="detect-box"><span>DETECTION BOX</span></div><span class="camera-caption">ESP32-CAM / OBJECT DETECTION</span></div></div>
-          <div class="project-body"><div class="project-meta"><span>EMBEDDED ML</span><span>2025 · CO-DEVELOPED</span></div><h3>Real-Time Automated Billing</h3><p>Resume-described system using an ESP32-CAM and Edge Impulse object detection, with on-device inference and a Wi-Fi web server exposing results through a JSON API.</p><div class="project-tags"><span>ESP32-CAM</span><span>Edge Impulse</span><span>Wi-Fi API</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: model evaluation or confusion matrix.</li><li>Evidence to add: real-time camera and billing demo screenshots.</li><li>Evidence to add: measured inference latency, if available.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — add actual model and runtime metrics.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
-        <article class="project-card" data-category="analog">
-          <div class="project-visual visual-ota"><div class="visual-label">05 / ANALOG CMOS</div><svg viewBox="0 0 320 150" aria-hidden="true"><g stroke="#ffc878" stroke-width="1.5" fill="none"><path d="M50 40 H90 V68 H112 M50 112 H90 V84 H112 M208 68 H238 V40 H270 M208 84 H238 V112 H270"/><path d="M145 45 V105 M175 45 V105 M145 60 H175 M145 90 H175"/><circle cx="160" cy="75" r="38" stroke-dasharray="3 5" opacity=".6"/></g><g fill="#f7d8a4" font-size="10" font-family="DM Mono"><text x="160" y="20" text-anchor="middle">5T OTA</text><text x="18" y="30">IN+</text><text x="18" y="130">IN−</text><text x="274" y="30">OUT</text></g></svg></div>
-          <div class="project-body"><div class="project-meta"><span>CADENCE VIRTUOSO · SPECTRE</span><span>2026</span></div><h3>5T Operational Transconductance Amplifier</h3><p>Designed a five-transistor CMOS OTA with a differential input stage and current-mirror active load. The resume describes DC, AC, transient, and operating-point analyses.</p><div class="project-tags"><span>CMOS</span><span>GPDK45 / node to confirm</span><span>AC analysis</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: actual schematic and DC operating-point values.</li><li>Evidence to add: gain/phase plots, phase margin, slew rate, and output swing only where measured.</li><li>Confirm the technology node: the supplied analog and RTL resumes differ.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — insert plots and measured values from Spectre.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
-        <article class="project-card" data-category="analog">
-          <div class="project-visual visual-bgr"><div class="visual-label">06 / VOLTAGE REFERENCE</div><svg viewBox="0 0 320 150" aria-hidden="true"><g fill="none" stroke="#ffc878" stroke-width="1.5"><path d="M24 110 H60 V80 H98 V55 H138 V42 H176 V45 H220 V55 H260 V72 H298"/><path d="M24 120 H298" opacity=".3" stroke-dasharray="3 5"/><path d="M24 24 V120" opacity=".3"/></g><g fill="#f7d8a4" font-size="9" font-family="DM Mono"><text x="32" y="18">VREF vs TEMPERATURE</text><text x="28" y="138">TEMP SWEEP — ADD ACTUAL DATA</text></g></svg></div>
-          <div class="project-body"><div class="project-meta"><span>CADENCE VIRTUOSO · SPECTRE</span><span>ACADEMIC PROJECT</span></div><h3>CMOS Bandgap Reference</h3><p>Resume-described bandgap reference using PTAT/CTAT voltage generation concepts, current mirrors, and resistor networks, with DC and temperature-sweep simulation.</p><div class="project-tags"><span>PTAT / CTAT</span><span>Current mirrors</span><span>Temperature sweep</span></div><details class="project-details"><summary>Implementation &amp; results</summary><ul><li>Evidence to add: complete circuit schematic and startup waveform.</li><li>Evidence to add: reference voltage versus temperature graph.</li><li>Evidence to add: temperature coefficient calculated from measured simulation data.</li></ul><p class="result-placeholder">RESULTS PLACEHOLDER — add measured values and confirm sweep range.</p></details><a class="text-link project-link" href="#results">Add results evidence <span>↗</span></a></div>
-        </article>
+      
+<section class="projects-section" id="projects">
+  <div class="projects-heading">
+    <div>
+      <span class="section-kicker">RTL DESIGN · EMBEDDED · CIRCUITS</span>
+      <h2>Selected <span>Projects</span></h2>
+      <p>
+        A collection of engineering projects focused on digital design,
+        embedded systems, and analog circuits.
+      </p>
+    </div>
+    <span class="section-number">03</span>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- Project 1: Asynchronous FIFO -->
+    <article class="project-item">
+      <div class="project-visual fifo-visual">
+        <span class="visual-label">01 / DIGITAL DESIGN</span>
+        <svg viewBox="0 0 420 180" role="img"
+             aria-label="Asynchronous FIFO block diagram">
+          <g fill="none" stroke="#42d9d0" stroke-width="1.5">
+            <path d="M20 55 H110 V75 H145"/>
+            <path d="M20 125 H110 V105 H145"/>
+            <path d="M275 75 H310 V55 H400"/>
+            <path d="M275 105 H310 V125 H400"/>
+            <rect x="145" y="55" width="130" height="70" rx="7"/>
+            <path d="M210 55 V25 M210 125 V155"/>
+          </g>
+          <g fill="#e5edf8" font-size="13" text-anchor="middle">
+            <text x="210" y="84">ASYNC FIFO</text>
+            <text x="210" y="102" fill="#9bafc4" font-size="10">
+              WRITE CLK / READ CLK
+            </text>
+          </g>
+          <g fill="#42d9d0">
+            <circle cx="110" cy="55" r="3"/>
+            <circle cx="110" cy="125" r="3"/>
+            <circle cx="310" cy="55" r="3"/>
+            <circle cx="310" cy="125" r="3"/>
+          </g>
+        </svg>
       </div>
-    </section>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span>VERILOG RTL</span><span>01</span>
+        </div>
+        <h3>Asynchronous FIFO Design</h3>
+        <p>
+          Designed a FIFO for independent read and write clock domains,
+          using Gray-code pointer conversion and synchronizers.
+        </p>
+        <ul class="project-tags">
+          <li>CDC</li><li>Gray Code</li><li>Verilog</li><li>FIFO</li>
+        </ul>
+        <a class="project-link" href="#contact">View details ↗</a>
+      </div>
+    </article>
+
+    <!-- Project 2: UART -->
+    <article class="project-item">
+      <div class="project-visual uart-visual">
+        <span class="visual-label">02 / SERIAL COMMUNICATION</span>
+        <svg viewBox="0 0 420 180" role="img"
+             aria-label="UART serial data waveform">
+          <g fill="none" stroke="#a78bfa" stroke-width="2">
+            <path d="M15 115 H65 V55 H105 V115 H145 V55 H185 V115 H225 V55 H265 V115 H305 V55 H345 V115 H405"/>
+          </g>
+          <g fill="#b9a8ff" font-size="10" text-anchor="middle">
+            <text x="40" y="40">START</text>
+            <text x="85" y="40">DATA</text>
+            <text x="365" y="40">STOP</text>
+          </g>
+          <path d="M65 132 H345" stroke="#536782" stroke-dasharray="4 5"/>
+          <text x="205" y="153" fill="#a9b9ce"
+                font-size="11" text-anchor="middle">
+            TX / RX SERIAL FRAME
+          </text>
+        </svg>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span>VERILOG HDL</span><span>02</span>
+        </div>
+        <h3>UART Protocol Design</h3>
+        <p>
+          Developed a modular UART design with transmitter and receiver
+          blocks, baud-rate generation, and FSM-based communication.
+        </p>
+        <ul class="project-tags">
+          <li>UART</li><li>TX/RX</li><li>FSM</li><li>Verilog</li>
+        </ul>
+        <a class="project-link" href="#contact">View details ↗</a>
+      </div>
+    </article>
+
+    <!-- Project 3: CMOS OTA -->
+    <article class="project-item">
+      <div class="project-visual ota-visual">
+        <span class="visual-label">03 / ANALOG CIRCUITS</span>
+        <svg viewBox="0 0 420 180" role="img"
+             aria-label="Simplified CMOS differential amplifier schematic">
+          <g fill="none" stroke="#63d5f5" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round">
+            <path d="M210 25 V45 M145 45 H275 M145 45 V65 M275 45 V65"/>
+            <circle cx="210" cy="43" r="10"/>
+            <path d="M205 43 H215 M210 38 V48"/>
+            <path d="M145 65 V85 M275 65 V85"/>
+            <path d="M145 85 H165 M255 85 H275"/>
+            <path d="M165 72 V98 M255 72 V98"/>
+            <path d="M165 85 H185 M235 85 H255"/>
+            <path d="M185 85 V115 M235 85 V115"/>
+            <path d="M185 115 H235 M210 115 V135"/>
+            <path d="M210 135 V150 M200 150 H220 M203 155 H217 M206 160 H214"/>
+            <path d="M165 85 H120 M255 85 H300 M300 85 H340"/>
+          </g>
+          <g fill="#dce8f7" font-size="11">
+            <text x="210" y="15" text-anchor="middle">VDD</text>
+            <text x="100" y="80">Vin+</text>
+            <text x="302" y="75">Vout</text>
+            <text x="210" y="175" text-anchor="middle">CMOS 5T OTA</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span>ANALOG DESIGN</span><span>03</span>
+        </div>
+        <h3>CMOS 5T OTA</h3>
+        <p>
+          Explored a five-transistor CMOS operational transconductance
+          amplifier and its DC, AC, and transient behaviour.
+        </p>
+        <ul class="project-tags">
+          <li>CMOS</li><li>OTA</li><li>LTspice/Cadence</li>
+        </ul>
+        <a class="project-link" href="#contact">View details ↗</a>
+      </div>
+    </article>
+
+    <!-- Project 4: Embedded Smart Parking -->
+    <article class="project-item">
+      <div class="project-visual parking-visual">
+        <span class="visual-label">04 / EMBEDDED SYSTEMS</span>
+        <svg viewBox="0 0 420 180" role="img"
+             aria-label="Ultrasonic sensor and microcontroller block diagram">
+          <g fill="none" stroke="#42d9d0" stroke-width="1.5">
+            <rect x="15" y="58" width="90" height="55" rx="6"/>
+            <circle cx="40" cy="84" r="12"/>
+            <circle cx="80" cy="84" r="12"/>
+            <path d="M105 85 H150 M140 78 L150 85 L140 92"/>
+            <rect x="150" y="45" width="115" height="80" rx="6"/>
+            <path d="M265 65 H300 M290 58 L300 65 L290 72"/>
+            <path d="M265 105 H300 M290 98 L300 105 L290 112"/>
+            <rect x="300" y="42" width="105" height="42" rx="5"/>
+            <rect x="300" y="95" width="105" height="42" rx="5"/>
+          </g>
+          <g fill="#dce8f7" font-size="11" text-anchor="middle">
+            <text x="60" y="132">Ultrasonic</text>
+            <text x="207" y="80">Microcontroller</text>
+            <text x="207" y="97">Embedded C</text>
+            <text x="352" y="60">Slot Status</text>
+            <text x="352" y="72">Display</text>
+            <text x="352" y="113">Serial / IoT</text>
+            <text x="352" y="125">Interface</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span>EMBEDDED SYSTEMS</span><span>04</span>
+        </div>
+        <h3>Smart Parking System</h3>
+        <p>
+          Developed a smart parking concept using an ultrasonic sensor
+          and a microcontroller to detect parking-slot availability.
+        </p>
+        <ul class="project-tags">
+          <li>Embedded C</li><li>Ultrasonic Sensor</li><li>MCU</li>
+        </ul>
+        <a class="project-link" href="#contact">View details ↗</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
     <section class="section-wrap section-block results-section" id="results">
       <div class="section-heading"><p class="section-kicker">04 / EVIDENCE</p><h2>Results over <span class="muted-heading">claims.</span></h2><p class="section-intro">A space for real, reviewable evidence. No performance values are asserted here until the supporting project files are added.</p></div>

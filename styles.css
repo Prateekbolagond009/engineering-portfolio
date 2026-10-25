@@ -365,4 +365,61 @@ h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; letter-spacing: -.045
   gap: 20px;
 }
 .footer-brand .brand-mark { font-size: 25px; }
-.site-footer p, .back-top { font-size: 10px;
+.site-footer p, .back-top { font-size: 10px; color: var(--muted); margin: 0; }
+.back-top { color: var(--cyan); }
+
+/* Responsive Media Queries */
+@media (max-width: 950px) {
+  .hero { gap: 28px; padding-top: 55px; }
+  .hero-art.ece-photo { min-height: 390px; }
+  .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .section-block { gap: 30px; }
+  .nav-links { gap: 16px; }
+  #projects .project-grid { column-gap: 24px; }
+  #projects .project-layout { grid-template-columns: 1fr; gap: 12px; }
+  #projects .project-diagram { grid-row: 1; min-height: 135px; }
+  #projects .diagram-svg { max-height: 150px; }
+}
+
+@media (max-width: 700px) {
+  .section-wrap, .site-footer { width: calc(100% - 34px); }
+  .site-header { height: 72px; padding: 0 17px; }
+  .brand-text { font-size: 10px; }
+  .brand-text small { max-width: 195px; font-size: 8px; }
+  .menu-toggle { display: block; flex: 0 0 42px; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    background: #0e192b;
+    border-bottom: 1px solid var(--line);
+    padding: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 6px; border-bottom: 1px solid rgba(142,164,193,.1); }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 48px; padding-bottom: 60px; gap: 30px; }
+  .hero-art.ece-photo { min-height: 280px; grid-row: 2; }
+  h1 { font-size: clamp(39px, 11vw, 57px); }
+  .hero-meta { gap: 12px; }
+  .scroll-cue { bottom: 15px; }
+  .section-block { grid-template-columns: 1fr; padding-top: 60px; padding-bottom: 60px; gap: 25px; }
+  .skill-grid { grid-template-columns: 1fr; }
+  #projects.project-section { padding-top: 58px; padding-bottom: 58px; }
+  #projects .project-heading { display: block; }
+  #projects .project-heading .section-intro { margin-top: 15px; }
+  #projects .project-grid { grid-template-columns: minmax(0, 1fr); }
+  #projects .project-card { padding: 24px 0; }
+  #projects .project-card:nth-child(n + 2) { border-top: 1px solid var(--line); }
+  #projects .project-layout { grid-template-columns: minmax(0, 1fr); }
+  #projects .project-diagram { grid-row: auto; min-height: 145px; }
+  #projects .project-info h3 { font-size: 20px; }
+  .contact-section { padding: 60px 0; }
+  .site-footer { padding: 22px 0; flex-wrap: wrap; }
+  .site-footer p { order: 3; width: 100%; }
+  .credential-item { grid-template-columns: 48px 1fr 16px; gap: 10px; }
+}
